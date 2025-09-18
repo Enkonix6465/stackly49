@@ -39,7 +39,7 @@ const Home1 = () => {
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white drop-shadow-lg">
               {t("home1.heroTitle")}
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 drop-shadow">
+            <p className="text-lg md:text-xl text-gray-900 dark:text-gray-300 mb-8 drop-shadow">
               {t("home1.heroDesc")}
             </p>
             <a
@@ -177,7 +177,7 @@ const Home1 = () => {
                   alt={story.title}
                   width={400}
                   height={200}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-top object-cover"
                 />
                 <div className="p-4 flex-1 flex flex-col justify-between">
                   <h4 className="font-bold text-lg mb-2 text-[#00bcd4]">
