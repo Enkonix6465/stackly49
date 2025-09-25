@@ -363,6 +363,12 @@ const Header: React.FC = () => {
             </button>
             {openDropdown === "services" && (
               <div className="pl-4 mt-2 bg-white dark:bg-gray-800 rounded shadow-md border dark:border-gray-700 w-full">
+                <Link
+                  href={`/services`}
+                  className="block py-2 w-full text-left hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                >
+                  {t("hedder.services")}
+                </Link>
                 {services.map((service, index) => (
                   <Link
                     key={index}
