@@ -202,7 +202,7 @@ const Home1 = () => {
           <h2 className="text-3xl  font-bold mb-6 text-center text-[#00bcd4]">
             {t("home1.reviewsTitle")}
           </h2>
-          <div className="flex flex-col md:flex-row items-center justify-between   gap-8 pb-4  ">
+          <div className="flex flex-wrap  items-center  justify-center   gap-8 pb-4  ">
             {[
               {
                 name: t("home1.review1Name"),
@@ -265,7 +265,7 @@ const Home1 = () => {
               </p>
               <a
                 href="/contact-us"
-                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
+                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide text-nowrap text-center"
               >
                 {t("home1.collabBtn")}
               </a>

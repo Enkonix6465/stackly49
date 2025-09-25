@@ -85,12 +85,24 @@ const AboutUs = () => {
         </section>
 
         {/* Section 3: Meet the Team (Horizontal Scroll Carousel) */}
-        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-20 px-6 justify-center flex flex-col items-center   mx-auto w-full">
-            <h2 className="text-3xl font-bold mb-12 text-[#00bcd4] text-center">
-              {t("aboutUs.teamTitle")}
-            </h2>
-            <div className="flex flex-wrap gap-10 pb-4">
+        <section className="relative bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-gray-900 dark:via-indigo-900/30 dark:to-gray-800 overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+          </div>
+
+          <div className="relative py-20 px-6 justify-center flex flex-col items-center mx-auto w-full">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00bcd4] via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+                {t("aboutUs.teamTitle")}
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 mx-auto rounded-full"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+                Meet the talented individuals who make our vision a reality
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-10 pb-4">
               {[
                 {
                   name: t("aboutUs.team1Name"),
@@ -314,37 +326,56 @@ const AboutUs = () => {
                   ],
                 },
               ].map((member, idx) => (
-                <div
-                  key={idx}
-                  className="w-[320px] max-w-xs bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-10 flex flex-col items-center relative hover:-translate-y-2 hover:scale-105 transition-all duration-300"
-                >
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    width={100}
-                    height={100}
-                    className="rounded-full mb-6 border-4 w-20 h-20 object-cover object-top border-[#00bcd4] shadow-lg"
-                  />
-                  <div className="font-bold text-2xl text-[#00bcd4] mb-1 text-center">
-                    {member.name}
+                <div key={idx} className="group w-[320px] max-w-xs relative">
+                  {/* Animated Border */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-3xl p-[2px] group-hover:animate-spin-slow">
+                    <div className="bg-white dark:bg-gray-900 rounded-3xl h-full w-full"></div>
                   </div>
-                  <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center">
-                    {member.role}
-                  </div>
-                  <div className="italic text-sm text-cyan-600 dark:text-cyan-300 mb-4 text-center">
-                    {member.fun}
-                  </div>
-                  <div className="flex gap-4 mt-2">
-                    {member.socials.map((social, sidx) => (
-                      <a
-                        key={sidx}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {social.icon}
-                      </a>
-                    ))}
+
+                  {/* Card Content */}
+                  <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-10 flex flex-col items-center hover:-translate-y-4 hover:shadow-3xl transition-all duration-500 border border-gray-100 dark:border-gray-800">
+                    {/* Floating Avatar */}
+                    <div className="relative mb-6">
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75 scale-110"></div>
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        width={100}
+                        height={100}
+                        className="relative rounded-full w-20 h-20 object-cover object-top border-4 border-white dark:border-gray-800 shadow-xl group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* Member Info */}
+                    <div className="font-bold text-2xl bg-gradient-to-r from-[#00bcd4] to-purple-500 bg-clip-text text-transparent mb-1 text-center group-hover:animate-pulse">
+                      {member.name}
+                    </div>
+                    <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center font-medium">
+                      {member.role}
+                    </div>
+                    <div className="italic text-sm text-cyan-600 dark:text-cyan-300 mb-6 text-center bg-cyan-50 dark:bg-cyan-900/20 px-3 py-1 rounded-full">
+                      {member.fun}
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="flex gap-4 mt-2">
+                      {member.socials.map((social, sidx) => (
+                        <a
+                          key={sidx}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-purple-400 hover:to-pink-500 transition-all duration-300 hover:scale-110 hover:rotate-12 shadow-lg"
+                        >
+                          <div className="w-6 h-6 flex items-center justify-center">
+                            {social.icon}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+
+                    {/* Hover Effects */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   </div>
                 </div>
               ))}
@@ -358,7 +389,7 @@ const AboutUs = () => {
             <h2 className="text-3xl font-bold mb-14 text-[#00bcd4] text-center">
               {t("aboutUs.valuesTitle")}
             </h2>
-            <div className="flex flex-wrap gap-2  items-center justify-center md:gap-0 relative">
+            <div className="flex flex-wrap gap-2  items-center justify-center relative">
               {[
                 {
                   icon: (
@@ -455,19 +486,38 @@ const AboutUs = () => {
               ].map((value, idx) => (
                 <div
                   key={idx}
-                  className=" flex  flex-col  items-center bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-10 mx-6 z-10 hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+                  // Main Container: Semi-transparent background (simulating glass), soft rounded corners, strong border.
+                  // The perspective and rotate classes create a subtle 3D hover effect.
+                  className="flex w-[340px] flex-col items-start bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-3xl p-8 mx-6 z-10 
+               border border-white/30 dark:border-gray-700 shadow-xl 
+               hover:rotate-1 hover:shadow-2xl transition-all duration-500"
                 >
                   <div
-                    className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg border-4 ${
-                      idx === 1 ? "border-cyan-400" : "border-[#00bcd4]"
-                    } bg-gradient-to-tr from-[#00bcd4] to-cyan-400 animate-pulse`}
+                    // Icon Container: Circle with a gradient border mimicking a light source.
+                    className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 
+                    bg-white/90 dark:bg-gray-700/90 
+                    border-4 border-transparent ring-2 ring-[#00bcd4] 
+                    ${
+                      idx === 1
+                        ? "ring-offset-2 ring-offset-white/80"
+                        : "ring-offset-0"
+                    } 
+                    `}
                   >
-                    {value.icon}
+                    <span className="text-2xl">{value.icon}</span>
                   </div>
-                  <h4 className="font-bold text-xl text-[#00bcd4] mb-2 text-center">
+
+                  <h4
+                    // Title: Highly legible, bold text using the accent color.
+                    className="font-black text-2xl text-[#00bcd4]   mb-2 text-left"
+                  >
                     {value.title}
                   </h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-center">
+
+                  <p
+                    // Description: Grayed text for contrast against the bold title.
+                    className="text-gray-700 dark:text-gray-300 text-lg text-left"
+                  >
                     {value.desc}
                   </p>
                 </div>
