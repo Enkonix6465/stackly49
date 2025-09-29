@@ -1,12 +1,11 @@
-import React from "react";
-import Image from "next/image";
+import Footer from "@/components/Footer";
 import Header from "@/components/Hedder";
 import Head from "next/head";
-import Footer from "@/components/Footer";
+import Image from "next/image";
 import Link from "next/link";
 
-import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
   const { t } = useTranslation();

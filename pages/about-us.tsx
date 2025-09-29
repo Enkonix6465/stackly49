@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "next/image";
+import Footer from "@/components/Footer";
 import Header from "@/components/Hedder";
 import Head from "next/head";
-import Footer from "@/components/Footer";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {

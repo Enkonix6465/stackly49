@@ -83,7 +83,7 @@ const Header: React.FC = () => {
         const updatedUsers = users.map((u) =>
           u.email === user.email
             ? { ...u, logoutTime: new Date().toISOString() }
-            : u
+            : u,
         );
         // Save updated users back to localStorage
         localStorage.setItem("users", JSON.stringify(updatedUsers));

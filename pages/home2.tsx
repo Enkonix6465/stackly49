@@ -1,16 +1,9 @@
-import React from "react";
+import Footer from "@/components/Footer";
+import Header from "@/components/Hedder";
+import { CodeIcon, DessertIcon, RocketIcon, SearchIcon } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
-import Header from "@/components/Hedder";
-import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
-import {
-  CodeIcon,
-  DessertIcon,
-  RocketIcon,
-  Search,
-  SearchIcon,
-} from "lucide-react";
 
 const HomePage2 = () => {
   const { t } = useTranslation();
