@@ -306,7 +306,7 @@ const Blog = () => {
         <title>{t("blog.pageTitle")}</title>
         <meta name="description" content={t("blog.pageDesc")} />
       </Head>
-      <main className=" min-h-screen flex flex-col caret-transparent">
+      <main className=" max-h-screen flex flex-col caret-transparent overflow-auto  [&::-webkit-scrollbar]:hidden">
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
