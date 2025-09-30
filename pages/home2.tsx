@@ -624,9 +624,9 @@ const HomePage2: React.FC = () => {
                         : "bg-white/60 dark:bg-gray-800/60 border-cyan-100/40 dark:border-gray-700/40 hover:shadow-xl"
                     }`}
                   >
-                    {active && (
+                    {/* {active && (
                       <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-[#00bcd4]/40 via-cyan-400/30 to-blue-500/30 blur-xl opacity-80 pointer-events-none" />
-                    )}
+                    )} */}
                     <div className="relative mb-5">
                       <Image
                         src={client.avatar}
@@ -635,9 +635,7 @@ const HomePage2: React.FC = () => {
                         height={92}
                         className="rounded-full w-24 h-24 object-cover border-4 border-white dark:border-gray-900 shadow"
                       />
-                      <span className="absolute -bottom-1 -right-1 px-2 py-[2px] rounded-full text-[10px] font-semibold bg-gradient-to-r from-[#00bcd4] to-cyan-400 text-white shadow ring-1 ring-white/60 dark:ring-gray-900/80">
-                        {idx + 1}/{storyList.length}
-                      </span>
+                       
                     </div>
                     <p className="relative text-gray-700 dark:text-gray-300 text-sm leading-relaxed italic mb-6">
                       “{client.quote}”

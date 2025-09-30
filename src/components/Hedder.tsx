@@ -273,7 +273,7 @@ const Header: React.FC = () => {
               <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
                 <button
                   onClick={handleLogout}
-                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                  className="flex w-full px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.logout")}
                 </button>

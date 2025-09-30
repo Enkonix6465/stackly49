@@ -153,8 +153,8 @@ const AdminDashboard = () => {
         </section>
 
         {/* Pie Chart Section */}
-        <section className="py-10 px-6 flex   mx-auto w-full">
-          <div className="flex-1 ">
+        <section className="py-10 px-6 flex  flex-wrap justify-center  mx-auto w-full">
+          <div className=" md:flex-1  ">
             <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
               {t("adminDashboard.activityTitle")}
             </h2>
@@ -188,7 +188,7 @@ const AdminDashboard = () => {
               </ResponsiveContainer>
             </div>
           </div>
-          <div className="flex-1 ml-10">
+          <div className=" md:flex-1  ml-10">
             <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
               {t("adminDashboard.registrationsTitle")}
             </h2>
