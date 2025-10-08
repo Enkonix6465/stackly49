@@ -104,7 +104,7 @@ const CorporateRedesign = () => {
             </p>
             <div className="mt-10">
               <div
-                onClick={() => window.location.href='/blog'}
+                onClick={() => window.history.back()}
                 className="inline-block  cursor-default px-8 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-lg tracking-wide"
               >
                 {t("corporateRedesign.backToBlog")}

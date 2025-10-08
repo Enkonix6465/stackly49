@@ -51,8 +51,7 @@ const Header: React.FC = () => {
     { code: "ar", label: "Arabic" },
     { code: "he", label: "Hebrew" },
   ];
-  //   const [selectedLanguage, setSelectedLanguage] = useState("English");
-  // const [langReady, setLangReady] = useState(false);
+
   const router = useRouter();
 
   React.useEffect(() => {
@@ -83,7 +82,7 @@ const Header: React.FC = () => {
         const updatedUsers = users.map((u) =>
           u.email === user.email
             ? { ...u, logoutTime: new Date().toISOString() }
-            : u,
+            : u
         );
         // Save updated users back to localStorage
         localStorage.setItem("users", JSON.stringify(updatedUsers));
@@ -169,7 +168,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className=" caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100 text-nowrap  ">
+    <header
+      className={`caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100 text-nowrap  ${
+        i18n.language == "en" ? "pl-4 lg:pl-8" : ""
+      }`}
+    >
       <div
         ref={dropdownRef}
         className="  mx-auto flex items-center justify-between px-4 py-3"
@@ -185,7 +188,7 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-6 text-gray-700 dark:text-gray-200 font-medium">
+        <nav className="hidden min-[769px]:flex items-center gap-6 text-gray-700 dark:text-gray-200 font-medium">
           <div className="relative group">
             <button
               onClick={() => handleDropdown("home")}
@@ -256,36 +259,20 @@ const Header: React.FC = () => {
             {t("hedder.contactUs")}
           </Link>
         </nav>
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden min-[769px]:flex items-center gap-4">
           <ModeToggle />
-          {/* Profile Dropdown */}
-          <div className="relative group">
-            <button
-              onClick={() => handleDropdown("profile")}
-              className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >
-              <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
-                {userInitials || "AD"}
-              </span>
-              <span className="ml-1">{t("hedder.profile")}</span> <span>▼</span>
-            </button>
-            {openDropdown === "profile" && (
-              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
-                <button
-                  onClick={handleLogout}
-                  className="flex w-full px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                >
-                  {t("hedder.logout")}
-                </button>
-              </div>
-            )}
-          </div>
+
+          {/* Language Dropdown */}
           <div className="relative group">
             <button
               onClick={() => handleDropdown("language")}
-              className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+              className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-full border border-blue-200 dark:border-blue-700 bg-white dark:bg-gray-900"
             >
-              <span className="text-xl">🌐</span> <span>▼</span>
+              <span className="text-base font-semibold">
+                {supportedLanguages.find((l) => l.code === i18n.language)
+                  ?.label || "Language"}
+              </span>
+              <span className="text-lg">▼</span>
             </button>
             {openDropdown === "language" && (
               <div
@@ -297,7 +284,7 @@ const Header: React.FC = () => {
                   <button
                     key={lang.code}
                     onClick={() => handleLanguageChange(lang.label)}
-                    className="block px-4 w-full py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                    className=" px-4 w-full py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors flex  "
                   >
                     {lang.label}
                   </button>
@@ -305,9 +292,31 @@ const Header: React.FC = () => {
               </div>
             )}
           </div>
+          {/* Profile Dropdown (with Logout) */}
+          <div className="relative group">
+            <button
+              onClick={() => handleDropdown("profile")}
+              className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+            >
+              <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
+                {userInitials || "AD"}
+              </span>
+              <span>▼</span>
+            </button>
+            {openDropdown === "profile" && (
+              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
+                <button
+                  onClick={handleLogout}
+                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors text-left w-full"
+                >
+                  {t("hedder.logout")}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
-        <div className="md:hidden flex gap-4 items-center">
+        <div className="min-[769px]:hidden flex gap-4 items-center">
           {/* Mobile Hamburger */}
           <button
             className=" text-2xl text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
@@ -322,7 +331,7 @@ const Header: React.FC = () => {
       {menuOpen && (
         <nav
           ref={dropdownRef}
-          className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors"
+          className="min-[769px]:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors"
         >
           <div className="mb-2">
             <button
@@ -393,49 +402,54 @@ const Header: React.FC = () => {
           >
             {t("hedder.contactUs")}
           </Link>
-          <div className="mt-4 border-t flex justify-between items-center   dark:border-gray-700 pt-4">
+          <div className="mt-4 border-t flex  justify-between gap-4 dark:border-gray-700 pt-4">
             <ModeToggle />
 
-            <div className="mb-2 flex items-center gap-2">
-              <button
-                onClick={() => handleDropdown("profile")}
-                className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-              >
-                <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
-                  {userInitials || "AD"}
-                </span>
-                {t("hedder.profile")} <span>▼</span>
-              </button>
-              {openDropdown === "profile" && (
-                <div className="  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
-                  <button
-                    onClick={handleLogout}
-                    className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                  >
-                    {t("hedder.logout")}
-                  </button>
-                </div>
-              )}
-            </div>
-            <div className="">
+            {/* Language Dropdown */}
+            <div className="relative group">
               <button
                 onClick={() => handleDropdown("language")}
-                className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-full border border-blue-200 dark:border-blue-700 bg-white dark:bg-gray-900 w-full"
               >
-                <span className="text-xl">🌐</span> {t("hedder.language")}{" "}
-                <span>▼</span>
+                <span className="text-base font-semibold">
+                  {supportedLanguages.find((l) => l.code === i18n.language)
+                    ?.label || "Language"}
+                </span>
+                <span className="text-lg">▼</span>
               </button>
               {openDropdown === "language" && (
-                <div className="flex flex-col p-3 absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
+                <div className="flex flex-col p-3 absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700 w-full">
                   {supportedLanguages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => handleLanguageChange(lang.label)}
-                      className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                      className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors text-left"
                     >
                       {lang.label}
                     </button>
                   ))}
+                </div>
+              )}
+            </div>
+            {/* Profile Dropdown (with Logout) */}
+            <div className="relative group">
+              <button
+                onClick={() => handleDropdown("profile")}
+                className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors w-full"
+              >
+                <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
+                  {userInitials || "AD"}
+                </span>
+                <span>▼</span>
+              </button>
+              {openDropdown === "profile" && (
+                <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px] w-full">
+                  <button
+                    onClick={handleLogout}
+                    className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors text-left w-full"
+                  >
+                    {t("hedder.logout")}
+                  </button>
                 </div>
               )}
             </div>

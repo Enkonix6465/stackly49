@@ -36,29 +36,26 @@ const skills = (t: (k: string) => string) => [
         viewBox="0 0 256 256"
       >
         <g fill="none">
-          <rect width={256} height={256} fill="#242938" rx={60}></rect>
+          <rect width={256} height={256} fill="#0a0f1a" rx={60}></rect>
           <path
             fill="#00d8ff"
             d="M128.001 146.951c10.304 0 18.656-8.353 18.656-18.656s-8.352-18.656-18.656-18.656s-18.656 8.353-18.656 18.656s8.353 18.656 18.656 18.656"
-          ></path>
+          />
           <path
             stroke="#00d8ff"
-            strokeWidth={8.911}
+            strokeWidth={9}
             d="M128.002 90.363c25.048 0 48.317 3.594 65.862 9.635C215.003 107.275 228 118.306 228 128.295c0 10.409-13.774 22.128-36.475 29.649c-17.162 5.686-39.746 8.654-63.523 8.654c-24.378 0-47.463-2.786-64.819-8.717C41.225 150.376 28 138.506 28 128.295c0-9.908 12.41-20.854 33.252-28.12c17.61-6.14 41.453-9.812 66.746-9.812z"
-            clipRule="evenodd"
-          ></path>
+          />
           <path
             stroke="#00d8ff"
-            strokeWidth={8.911}
+            strokeWidth={9}
             d="M94.981 109.438c12.514-21.698 27.251-40.06 41.249-52.24c16.864-14.677 32.914-20.425 41.566-15.436c9.017 5.2 12.288 22.988 7.463 46.41c-3.645 17.707-12.359 38.753-24.238 59.351c-12.179 21.118-26.124 39.724-39.931 51.792c-17.471 15.272-34.362 20.799-43.207 15.698c-8.583-4.946-11.865-21.167-7.747-42.852c3.479-18.323 12.21-40.812 24.841-62.723z"
-            clipRule="evenodd"
-          ></path>
+          />
           <path
             stroke="#00d8ff"
-            strokeWidth={8.911}
+            strokeWidth={9}
             d="M95.012 147.578c-12.549-21.674-21.093-43.616-24.659-61.826c-4.293-21.941-1.258-38.716 7.387-43.72c9.009-5.216 26.052.834 43.934 16.712c13.52 12.004 27.403 30.061 39.316 50.639c12.214 21.098 21.368 42.473 24.929 60.461c4.506 22.764.859 40.157-7.978 45.272c-8.574 4.964-24.265-.291-40.996-14.689c-14.136-12.164-29.26-30.959-41.933-52.849Z"
-            clipRule="evenodd"
-          ></path>
+          />
         </g>
       </svg>
     ),
@@ -104,276 +101,28 @@ const skills = (t: (k: string) => string) => [
     name: t("home2.skillNodejs"),
     key: "node",
     color: "from-emerald-400 to-teal-500",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={60}
-        height={40}
-        viewBox="0 0 512 314"
-      >
-        <defs>
-          <linearGradient
-            id="SVGn7WyXdQM"
-            x1="68.188%"
-            x2="27.823%"
-            y1="17.487%"
-            y2="89.755%"
-          >
-            <stop offset="0%" stopColor="#41873f"></stop>
-            <stop offset="32.88%" stopColor="#418b3d"></stop>
-            <stop offset="63.52%" stopColor="#419637"></stop>
-            <stop offset="93.19%" stopColor="#3fa92d"></stop>
-            <stop offset="100%" stopColor="#3fae2a"></stop>
-          </linearGradient>
-          <linearGradient
-            id="SVGYUHp3cUc"
-            x1="43.277%"
-            x2="159.245%"
-            y1="55.169%"
-            y2="-18.306%"
-          >
-            <stop offset="13.76%" stopColor="#41873f"></stop>
-            <stop offset="40.32%" stopColor="#54a044"></stop>
-            <stop offset="71.36%" stopColor="#66b848"></stop>
-            <stop offset="90.81%" stopColor="#6cc04a"></stop>
-          </linearGradient>
-          <linearGradient
-            id="SVGvU14yb0S"
-            x1="-4413.77%"
-            x2="5327.93%"
-            y1="13.43%"
-            y2="13.43%"
-          >
-            <stop offset="9.192%" stopColor="#6cc04a"></stop>
-            <stop offset="28.64%" stopColor="#66b848"></stop>
-            <stop offset="59.68%" stopColor="#54a044"></stop>
-            <stop offset="86.24%" stopColor="#41873f"></stop>
-          </linearGradient>
-          <linearGradient
-            id="SVGsgCB2mOc"
-            x1="-4.389%"
-            x2="101.499%"
-            y1="49.997%"
-            y2="49.997%"
-          >
-            <stop offset="9.192%" stopColor="#6cc04a"></stop>
-            <stop offset="28.64%" stopColor="#66b848"></stop>
-            <stop offset="59.68%" stopColor="#54a044"></stop>
-            <stop offset="86.24%" stopColor="#41873f"></stop>
-          </linearGradient>
-          <linearGradient
-            id="SVGgyHjFbjQ"
-            x1="-9713.77%"
-            x2="27.93%"
-            y1="36.21%"
-            y2="36.21%"
-          >
-            <stop offset="9.192%" stopColor="#6cc04a"></stop>
-            <stop offset="28.64%" stopColor="#66b848"></stop>
-            <stop offset="59.68%" stopColor="#54a044"></stop>
-            <stop offset="86.24%" stopColor="#41873f"></stop>
-          </linearGradient>
-          <linearGradient
-            id="SVGKboQA3ft"
-            x1="-103.861%"
-            x2="100.797%"
-            y1="50.275%"
-            y2="50.275%"
-          >
-            <stop offset="9.192%" stopColor="#6cc04a"></stop>
-            <stop offset="28.64%" stopColor="#66b848"></stop>
-            <stop offset="59.68%" stopColor="#54a044"></stop>
-            <stop offset="86.24%" stopColor="#41873f"></stop>
-          </linearGradient>
-          <linearGradient
-            id="SVGGrjLcbXr"
-            x1="130.613%"
-            x2="4.393%"
-            y1="-211.069%"
-            y2="201.605%"
-          >
-            <stop offset="0%" stopColor="#41873f"></stop>
-            <stop offset="32.88%" stopColor="#418b3d"></stop>
-            <stop offset="63.52%" stopColor="#419637"></stop>
-            <stop offset="93.19%" stopColor="#3fa92d"></stop>
-            <stop offset="100%" stopColor="#3fae2a"></stop>
-          </linearGradient>
-          <path
-            id="SVGA41zMIsC"
-            d="M57.903 1.85a5.96 5.96 0 0 0-5.894 0L3.352 29.933c-1.85 1.04-2.89 3.005-2.89 5.085v56.286c0 2.08 1.156 4.045 2.89 5.085l48.657 28.085a5.96 5.96 0 0 0 5.894 0l48.658-28.085c1.849-1.04 2.89-3.005 2.89-5.085V35.019c0-2.08-1.157-4.045-2.89-5.085z"
-          ></path>
-        </defs>
-        <g fill="none">
-          <path
-            fill="#539e43"
-            d="M253.11 313.094c-1.733 0-3.351-.462-4.854-1.271l-15.371-9.13c-2.312-1.272-1.156-1.734-.462-1.965c3.12-1.04 3.698-1.272 6.934-3.12c.347-.232.81-.116 1.156.115l11.789 7.05c.462.231 1.04.231 1.386 0l46.115-26.698c.462-.231.694-.694.694-1.271v-53.28c0-.579-.232-1.04-.694-1.272l-46.115-26.582c-.462-.232-1.04-.232-1.386 0l-46.115 26.582c-.462.231-.694.809-.694 1.271v53.28c0 .463.232 1.04.694 1.272l12.598 7.281c6.819 3.467 11.095-.578 11.095-4.623v-52.587c0-.693.578-1.387 1.387-1.387h5.894c.694 0 1.387.578 1.387 1.387v52.587c0 9.13-4.97 14.447-13.638 14.447c-2.658 0-4.738 0-10.633-2.89l-12.135-6.934c-3.005-1.733-4.854-4.97-4.854-8.437v-53.28c0-3.467 1.849-6.704 4.854-8.437l46.114-26.698c2.89-1.618 6.82-1.618 9.709 0l46.114 26.698c3.005 1.733 4.855 4.97 4.855 8.437v53.28c0 3.467-1.85 6.704-4.855 8.437l-46.114 26.698c-1.503.694-3.236 1.04-4.854 1.04m14.216-36.637c-20.225 0-24.386-9.246-24.386-17.105c0-.694.578-1.387 1.387-1.387h6.01c.693 0 1.271.462 1.271 1.156c.925 6.125 3.583 9.13 15.834 9.13c9.708 0 13.87-2.196 13.87-7.397c0-3.005-1.157-5.2-16.297-6.703c-12.598-1.272-20.457-4.045-20.457-14.1c0-9.362 7.86-14.91 21.035-14.91c14.793 0 22.075 5.086 23 16.18q0 .521-.347 1.041c-.232.231-.578.462-.925.462h-6.01c-.578 0-1.156-.462-1.271-1.04c-1.387-6.356-4.97-8.437-14.447-8.437c-10.633 0-11.905 3.699-11.905 6.472c0 3.352 1.503 4.392 15.834 6.241c14.216 1.85 20.92 4.508 20.92 14.447c-.116 10.171-8.437 15.95-23.116 15.95"
-          ></path>
-          <path
-            fill="#333"
-            d="M110.028 104.712c0-2.08-1.156-4.046-3.005-5.086l-49.004-28.2c-.81-.463-1.734-.694-2.658-.81h-.463c-.924 0-1.849.347-2.658.81l-49.004 28.2c-1.85 1.04-3.005 3.005-3.005 5.086l.116 75.817c0 1.04.578 2.08 1.502 2.543c.925.578 2.08.578 2.89 0l29.125-16.643c1.849-1.04 3.005-3.005 3.005-5.085v-35.482c0-2.08 1.155-4.045 3.005-5.085l12.366-7.166c.925-.578 1.965-.81 3.005-.81s2.08.232 2.89.81l12.366 7.166c1.85 1.04 3.005 3.004 3.005 5.085v35.482c0 2.08 1.156 4.045 3.005 5.085l29.125 16.643a2.82 2.82 0 0 0 3.005 0c.925-.463 1.503-1.503 1.503-2.543zM345.571.347c-.924-.463-2.08-.463-2.89 0c-.924.578-1.502 1.502-1.502 2.542v75.125c0 .693-.346 1.386-1.04 1.849q-1.04.519-2.08 0l-12.251-7.05a5.96 5.96 0 0 0-5.895 0l-49.004 28.316c-1.849 1.04-3.005 3.005-3.005 5.085v56.516c0 2.08 1.156 4.046 3.005 5.086l49.004 28.316a5.96 5.96 0 0 0 5.895 0l49.004-28.316c1.849-1.04 3.005-3.005 3.005-5.086V21.844c0-2.196-1.156-4.16-3.005-5.201zm-4.507 143.776c0 .578-.231 1.04-.694 1.271l-16.758 9.708a1.71 1.71 0 0 1-1.503 0l-16.758-9.708c-.463-.231-.694-.809-.694-1.271v-19.417c0-.578.231-1.04.694-1.271l16.758-9.709a1.71 1.71 0 0 1 1.503 0l16.758 9.709c.463.23.694.809.694 1.271zm167.584-19.879c1.85-1.04 2.89-3.005 2.89-5.086v-13.753c0-2.08-1.156-4.045-2.89-5.085l-48.657-28.2a5.96 5.96 0 0 0-5.895 0l-49.004 28.315c-1.85 1.04-3.005 3.005-3.005 5.085v56.517c0 2.08 1.156 4.045 3.005 5.085l48.657 27.738c1.85 1.04 4.046 1.04 5.78 0L489 178.45c.925-.463 1.503-1.503 1.503-2.543s-.578-2.08-1.503-2.543l-49.235-28.316c-.925-.578-1.503-1.502-1.503-2.542v-17.683c0-1.04.578-2.08 1.503-2.543l15.371-8.784a2.82 2.82 0 0 1 3.005 0l15.372 8.784c.925.578 1.502 1.502 1.502 2.543v13.869c0 1.04.578 2.08 1.503 2.542a2.82 2.82 0 0 0 3.005 0z"
-          ></path>
-          <path
-            fill="#539e43"
-            d="M456.292 121.585a1.05 1.05 0 0 1 1.156 0l9.362 5.432c.346.232.577.578.577 1.04v10.865c0 .462-.23.809-.577 1.04l-9.362 5.432a1.05 1.05 0 0 1-1.156 0l-9.361-5.432c-.347-.231-.578-.578-.578-1.04v-10.864c0-.463.23-.81.578-1.04z"
-          ></path>
-          <g transform="translate(134.068 70.501)">
-            <mask id="SVGag4sAb1K" fill="#fff">
-              <use href="#SVGA41zMIsC"></use>
-            </mask>
-            <use fill="url(#SVGn7WyXdQM)" href="#SVGA41zMIsC"></use>
-            <g mask="url(#SVGag4sAb1K)">
-              <path d="M51.893 1.85L3.121 29.933C1.27 30.974 0 32.94 0 35.02v56.286c0 1.387.578 2.658 1.502 3.698L56.285 1.156c-1.387-.231-3.005-.116-4.392.693m4.739 123.204c.462-.116.925-.347 1.387-.578l48.773-28.085c1.85-1.04 3.005-3.005 3.005-5.085V35.019c0-1.502-.694-3.005-1.734-4.045z"></path>
-              <path
-                fill="url(#SVGYUHp3cUc)"
-                d="M106.676 29.934L57.788 1.85a8 8 0 0 0-1.503-.578L1.502 95.12a6.1 6.1 0 0 0 1.619 1.387l48.888 28.085c1.387.809 3.005 1.04 4.507.577l51.432-94.078c-.347-.462-.81-.81-1.272-1.156"
-              ></path>
-            </g>
-            <g mask="url(#SVGag4sAb1K)">
-              <path d="M109.797 91.305V35.019c0-2.08-1.271-4.045-3.12-5.085L57.786 1.85a5.1 5.1 0 0 0-1.848-.693l53.511 91.42c.231-.347.347-.809.347-1.271M3.12 29.934C1.272 30.974 0 32.94 0 35.02v56.286c0 2.08 1.387 4.045 3.12 5.085l48.889 28.085q1.734 1.04 3.814.693L3.467 29.818z"></path>
-              <path
-                fill="url(#SVGvU14yb0S)"
-                fillRule="evenodd"
-                d="m50.391.809l-.693.347h.924z"
-                transform="translate(0 -9.246)"
-              ></path>
-              <path
-                fill="url(#SVGsgCB2mOc)"
-                fillRule="evenodd"
-                d="M106.792 105.636c1.387-.809 2.427-2.196 2.89-3.698L56.053 10.402c-1.387-.231-2.89-.116-4.16.693L3.351 39.065l52.355 95.465a8 8 0 0 0 2.196-.693z"
-                transform="translate(0 -9.246)"
-              ></path>
-              <path
-                fill="url(#SVGgyHjFbjQ)"
-                fillRule="evenodd"
-                d="m111.3 104.712l-.347-.578v.809z"
-                transform="translate(0 -9.246)"
-              ></path>
-              <path
-                fill="url(#SVGKboQA3ft)"
-                fillRule="evenodd"
-                d="m106.792 105.636l-48.773 28.085a7 7 0 0 1-2.196.693l.925 1.734l54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814"
-                transform="translate(0 -9.246)"
-              ></path>
-              <path
-                fill="url(#SVGGrjLcbXr)"
-                fillRule="evenodd"
-                d="m106.792 105.636l-48.773 28.085a7 7 0 0 1-2.196.693l.925 1.734l54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814"
-                transform="translate(0 -9.246)"
-              ></path>
-            </g>
-          </g>
-        </g>
-      </svg>
-    ),
+    icon: <span className="text-3xl font-black text-emerald-300">JS</span>,
   },
   {
     name: t("home2.skillTypescript"),
     key: "ts",
     color: "from-blue-500 to-sky-500",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={40}
-        height={40}
-        viewBox="0 0 256 256"
-      >
-        <g fill="none">
-          <rect width={256} height={256} fill="#007acc" rx={60}></rect>
-          <path
-            fill="#fff"
-            d="m56.611 128.849l-.081 10.484h33.32v94.679h23.569v-94.679h33.32v-10.281c0-5.689-.121-10.443-.284-10.565c-.122-.162-20.399-.244-44.983-.203l-44.739.122zm149.956-10.741c6.501 1.626 11.459 4.511 16.01 9.224c2.357 2.52 5.851 7.112 6.136 8.209c.081.325-11.053 7.802-17.798 11.987c-.244.163-1.22-.894-2.317-2.519c-3.291-4.795-6.745-6.868-12.028-7.233c-7.761-.529-12.759 3.535-12.718 10.321c0 1.991.284 3.169 1.097 4.795c1.706 3.535 4.876 5.648 14.832 9.955c18.326 7.884 26.168 13.085 31.045 20.48c5.445 8.249 6.664 21.415 2.966 31.208c-4.063 10.646-14.141 17.879-28.323 20.277c-4.388.772-14.791.65-19.504-.203c-10.281-1.829-20.033-6.908-26.047-13.572c-2.357-2.601-6.949-9.387-6.664-9.875c.121-.162 1.178-.812 2.356-1.503c1.138-.65 5.446-3.129 9.509-5.486l7.355-4.267l1.544 2.276c2.154 3.291 6.867 7.802 9.712 9.305c8.167 4.308 19.383 3.698 24.909-1.259c2.357-2.154 3.332-4.389 3.332-7.68c0-2.967-.366-4.267-1.91-6.502c-1.991-2.844-6.054-5.242-17.595-10.24c-13.206-5.689-18.895-9.224-24.096-14.832c-3.007-3.25-5.852-8.452-7.03-12.8c-.975-3.616-1.219-12.678-.447-16.335c2.722-12.759 12.353-21.658 26.25-24.3c4.511-.853 14.994-.528 19.424.569"
-          ></path>
-        </g>
-      </svg>
-    ),
+    icon: <span className="text-2xl font-black text-sky-300">TS</span>,
   },
   {
     name: t("home2.skillTailwind"),
     key: "tailwind",
     color: "from-cyan-400 to-teal-400",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={40}
-        height={40}
-        viewBox="0 0 256 256"
-      >
-        <g fill="none">
-          <rect width={256} height={256} fill="#242938" rx={60}></rect>
-          <path
-            fill="url(#SVGYCM7xdyn)"
-            fillRule="evenodd"
-            d="M83 110q9-36 45-36c36 0 40.5 27 58.5 31.5q18 4.502 31.5-13.5q-9 36-45 36c-36 0-40.5-27-58.5-31.5Q96.5 92 83 110m-45 54q9-36 45-36c36 0 40.5 27 58.5 31.5q18 4.502 31.5-13.5q-9 36-45 36c-36 0-40.5-27-58.5-31.5q-18-4.502-31.5 13.5"
-            clipRule="evenodd"
-          ></path>
-          <defs>
-            <linearGradient
-              id="SVGYCM7xdyn"
-              x1={86.5}
-              x2={163.5}
-              y1={74}
-              y2={185.5}
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#32b1c1"></stop>
-              <stop offset={1} stopColor="#14c6b7"></stop>
-            </linearGradient>
-          </defs>
-        </g>
-      </svg>
-    ),
+    icon: <span className="text-2xl font-black text-cyan-300">TW</span>,
   },
   {
     name: t("home2.skillSEO"),
     key: "seo",
     color: "from-indigo-400 to-violet-500",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={40}
-        height={40}
-        viewBox="0 0 48 48"
-      >
-        <g fill="none" strokeWidth={4}>
-          <rect
-            width={40}
-            height={32}
-            x={4}
-            y={8}
-            fill="#2f88ff"
-            stroke="#000"
-            rx={1.633}
-          ></rect>
-          <path
-            stroke="#fff"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M16 18.9479C14 15.9999 10.4978 17.9375 10.7489 20.9687C11 23.9999 15 23.9999 15.2498 27.0311C15.4997 30.0623 12 31.9999 10 29.0519"
-          ></path>
-          <path
-            stroke="#fff"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M26 18H22V31H26"
-          ></path>
-          <path
-            stroke="#fff"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M22 25H26"
-          ></path>
-          <rect
-            width={6}
-            height={13}
-            x={32}
-            y={18}
-            stroke="#fff"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            rx={3}
-          ></rect>
-        </g>
-      </svg>
+      <span className="text-xl font-extrabold text-violet-200 tracking-wider">
+        SEO
+      </span>
     ),
   },
 ];
@@ -624,9 +373,9 @@ const HomePage2: React.FC = () => {
                         : "bg-white/60 dark:bg-gray-800/60 border-cyan-100/40 dark:border-gray-700/40 hover:shadow-xl"
                     }`}
                   >
-                    {/* {active && (
+                    {active && (
                       <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-[#00bcd4]/40 via-cyan-400/30 to-blue-500/30 blur-xl opacity-80 pointer-events-none" />
-                    )} */}
+                    )}
                     <div className="relative mb-5">
                       <Image
                         src={client.avatar}
@@ -635,7 +384,9 @@ const HomePage2: React.FC = () => {
                         height={92}
                         className="rounded-full w-24 h-24 object-cover border-4 border-white dark:border-gray-900 shadow"
                       />
-                       
+                      <span className="absolute -bottom-1 -right-1 px-2 py-[2px] rounded-full text-[10px] font-semibold bg-gradient-to-r from-[#00bcd4] to-cyan-400 text-white shadow ring-1 ring-white/60 dark:ring-gray-900/80">
+                        {idx + 1}/{storyList.length}
+                      </span>
                     </div>
                     <p className="relative text-gray-700 dark:text-gray-300 text-sm leading-relaxed italic mb-6">
                       “{client.quote}”
@@ -726,6 +477,12 @@ const HomePage2: React.FC = () => {
                     >
                       <span className="absolute inset-0 bg-gradient-to-r from-[#00bcd4] via-cyan-400 to-blue-500 group-hover:scale-105 transition-transform" />
                       <span className="relative">{t("home2.ctaBtn")}</span>
+                    </a>
+                    <a
+                      href="/services"
+                      className="relative inline-flex items-center justify-center px-9 py-4 rounded-2xl font-semibold text-[#00bcd4] dark:text-cyan-300 text-lg bg-white/80 dark:bg-gray-900/70 backdrop-blur border border-cyan-100 dark:border-gray-800 hover:-translate-y-0.5 hover:shadow-xl transition"
+                    >
+                      {t("home2.heroBtn")}
                     </a>
                   </div>
                 </div>
